@@ -143,5 +143,6 @@ In order to produce a uniquely identifiable distribution:
 Feedstock Maintainers
 =====================
 
+* [@DetachHead](https://github.com/DetachHead/)
 * [@rxm7706](https://github.com/rxm7706/)
 
