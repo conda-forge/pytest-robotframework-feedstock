@@ -1,5 +1,5 @@
 {% set name = "pytest-robotframework" %}
-{% set version = "1.10.3" %}
+{% set version = "2.0.0" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/pytest_robotframework-{{ version }}.tar.gz
-  sha256: 40e1dfb9f66120c96c6ea366d2c8a696f00783f6e4939397311947fa64e447d0
+  sha256: ae0352f1e78d7d449804fd42f94947896131fc360c3639236cf834efee7cc3fc
 
 build:
   noarch: python
