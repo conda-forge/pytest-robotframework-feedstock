@@ -1,5 +1,5 @@
 {% set name = "pytest-robotframework" %}
-{% set version = "2.4.0" %}
+{% set version = "2.5.0" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/pytest_robotframework-{{ version }}.tar.gz
-  sha256: 474455586148b2b709392ae51d66bc29f74bd46aa363999fb4497343dc9ee6b6
+  sha256: dd63fe635786c8efad57231ba69ab416a0f2ca7efbcf087055dccdd083f0d63b
 
 build:
   noarch: python
@@ -23,8 +23,8 @@ requirements:
     - pluggy
     - typing_extensions
     - python >=3.8.0,<4.0.0
-    - pytest <8,>=7
-    - robotframework <7.0.0,>=6.1.1
+    - pytest <9,>=7
+    - robotframework <8.0.0,>=6.1
     - deepmerge <2.0.0,>=1.1.0
     - basedtyping <0.2,>=0.1.0
 
