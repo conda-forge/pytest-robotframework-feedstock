@@ -1,5 +1,5 @@
 {% set name = "pytest-robotframework" %}
-{% set version = "3.1.1" %}
+{% set version = "3.2.1" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/pytest_robotframework-{{ version }}.tar.gz
-  sha256: c5b94ad83a482829e3b7a09827f3231ce8b6fdf0ee4674f644c0f2ea5c8875c1
+  sha256: 999326281bd2dd16bbc64f9dfbe6a544956968dc349e3479d571296867aba0c1
 
 build:
   noarch: python
@@ -20,6 +20,7 @@ requirements:
     - pdm-backend
     - pip
   run:
+    - ansi2html >=1.9.1
     - pluggy
     - typing_extensions
     - python >=3.8.0,<4.0.0
