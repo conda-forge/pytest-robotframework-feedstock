@@ -1,13 +1,13 @@
 {% set name = "pytest-robotframework" %}
-{% set version = "3.1.1" %}
+{% set version = "4.3.0" %}
 
 package:
   name: {{ name|lower }}
   version: {{ version }}
 
 source:
-  url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/pytest_robotframework-{{ version }}.tar.gz
-  sha256: c5b94ad83a482829e3b7a09827f3231ce8b6fdf0ee4674f644c0f2ea5c8875c1
+  url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/pytest_robotframework-{{ version }}.tar.gz
+  sha256: 8d3e8850e148f690a9d378fdd67f3031a67d2cea39092faf41dce031746f7de4
 
 build:
   noarch: python
@@ -16,17 +16,15 @@ build:
 
 requirements:
   host:
-    - python >=3.8,<4.0
+    - python >=3.9,<4.0
     - pdm-backend
     - pip
   run:
-    - pluggy
-    - typing_extensions
-    - python >=3.8.0,<4.0.0
-    - pytest <9,>=7
-    - robotframework <8.0.0,>=6.1
-    - deepmerge <2.0.0,>=1.1.0
-    - basedtyping <0.2,>=0.1.0
+    - python >=3.9,<4.0
+    - pytest >=7,<9
+    - robotframework >=6.1,<8.0.0
+    - basedtyping >=0.1.0,<0.2
+    - ansi2html >=1.9.1
 
 test:
   imports:
