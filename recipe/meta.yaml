@@ -25,12 +25,6 @@ requirements:
     - robotframework >=6.1,<8.0.0
     - basedtyping >=0.1.0,<0.2
     - ansi2html >=1.9.1
-# No longer needed
-    #- pluggy
-    #- typing_extensions
-    #- deepmerge <2.0.0,>=1.1.0
-    #- basedtyping <0.2,>=0.1.0
-
 
 test:
   imports:
