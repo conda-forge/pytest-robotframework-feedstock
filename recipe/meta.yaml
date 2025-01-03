@@ -12,15 +12,15 @@ source:
 build:
   noarch: python
   script: {{ PYTHON }} -m pip install . -vv --no-deps --no-build-isolation
-  number: 0
+  number: 1
 
 requirements:
   host:
-    - python >=3.9,<4.0
+    - python {{ python_min }}
     - pdm-backend
     - pip
   run:
-    - python >=3.9,<4.0
+    - python >={{ python_min }},<4.0
     - pytest >=7,<9
     - robotframework >=6.1,<8.0.0
     - basedtyping >=0.1.0,<0.2
@@ -33,6 +33,7 @@ test:
     - pip check
   requires:
     - pip
+    - python {{ python_min }}
 
 about:
   home: https://github.com/detachhead/pytest-robotframework
