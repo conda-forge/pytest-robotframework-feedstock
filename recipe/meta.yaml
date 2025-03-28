@@ -1,5 +1,5 @@
 {% set name = "pytest-robotframework" %}
-{% set version = "4.3.0" %}
+{% set version = "4.3.1" %}
 
 package:
   name: {{ name|lower }}
@@ -7,12 +7,12 @@ package:
 
 source:
   url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/pytest_robotframework-{{ version }}.tar.gz
-  sha256: 8d3e8850e148f690a9d378fdd67f3031a67d2cea39092faf41dce031746f7de4
+  sha256: deb3948d276bfa2ad82bcac779c1f33ea8c2304b99a1162d273bece7de94b67a
 
 build:
   noarch: python
   script: {{ PYTHON }} -m pip install . -vv --no-deps --no-build-isolation
-  number: 1
+  number: 0
 
 requirements:
   host:
@@ -20,10 +20,12 @@ requirements:
     - pdm-backend
     - pip
   run:
+    - pluggy
+    - typing_extensions
     - python >={{ python_min }},<4.0
-    - pytest >=7,<9
-    - robotframework >=6.1,<8.0.0
-    - basedtyping >=0.1.0,<0.2
+    - pytest <9,>=7
+    - robotframework <8.0.0,>=6.1
+    - basedtyping <0.2,>=0.1.0
     - ansi2html >=1.9.1
 
 test:
