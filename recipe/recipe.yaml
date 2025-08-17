@@ -1,0 +1,50 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/prefix-dev/recipe-format/main/schema.json
+schema_version: 1
+
+context:
+  name: pytest-robotframework
+  version: "4.4.0.post2"
+
+package:
+  name: ${{ name|lower }}
+  version: ${{ version }}
+
+source:
+  url: https://pypi.org/packages/source/${{ name[0] }}/${{ name }}/pytest_robotframework-${{ version }}.tar.gz
+  sha256: 2a1ac0d5712eb0e1afde19ab2c498a21697a2a235912291c80ec9ae81a4996e4
+
+build:
+  number: 0
+  noarch: python
+  script: ${{ PYTHON }} -m pip install . -vv --no-deps --no-build-isolation
+
+requirements:
+  host:
+    - python ${{ python_min }}.*
+    - uv-build
+    - pip
+  run:
+    - python >=${{ python_min }},<4.0
+    - pytest >=7,<9
+    - robotframework >=6.1,<8.0.0
+    - basedtyping >=0.1.0,<0.2
+    - ansi2html >=1.9.1
+
+tests:
+  - python:
+      imports:
+        - pytest_robotframework
+      pip_check: true
+      python_version: ${{ python_min }}.*
+
+about:
+  homepage: https://detachhead.github.io/pytest-robotframework/latest/
+  repository: https://github.com/detachhead/pytest-robotframework
+  summary: A pytest plugin that can run both python and robotframework tests while generating robot reports for them.
+  license: MIT
+  license_file: LICENSE
+
+extra:
+  recipe-maintainers:
+    - DetachHead
+    - rxm7706
