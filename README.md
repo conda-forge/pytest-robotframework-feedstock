@@ -3,11 +3,13 @@ About pytest-robotframework-feedstock
 
 Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/pytest-robotframework-feedstock/blob/main/LICENSE.txt)
 
-Home: https://github.com/detachhead/pytest-robotframework
+Home: https://detachhead.github.io/pytest-robotframework/latest/
 
 Package license: MIT
 
-Summary: a pytest plugin that can run both python and robotframework tests while generating robot reports for them
+Summary: A pytest plugin that can run both python and robotframework tests while generating robot reports for them.
+
+Development: https://github.com/detachhead/pytest-robotframework
 
 Current build status
 ====================
