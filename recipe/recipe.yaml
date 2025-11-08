@@ -3,7 +3,7 @@ schema_version: 1
 
 context:
   name: pytest-robotframework
-  version: "4.4.1.post1"
+  version: "4.5.0"
 
 package:
   name: ${{ name|lower }}
@@ -11,7 +11,7 @@ package:
 
 source:
   url: https://pypi.org/packages/source/${{ name[0] }}/${{ name }}/pytest_robotframework-${{ version }}.tar.gz
-  sha256: 19789fbe15f877a5fcd70dac54430623546dc66e3deb70fabccbab6896ccc72e
+  sha256: 3928581227219164a4bec809a38848d997b19ee365b3e57da94d5ad4fae21799
 
 build:
   number: 0
