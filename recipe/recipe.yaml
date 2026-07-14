@@ -3,7 +3,7 @@ schema_version: 1
 
 context:
   name: pytest-robotframework
-  version: "4.6.2"
+  version: 4.6.3
 
 package:
   name: ${{ name|lower }}
@@ -11,7 +11,7 @@ package:
 
 source:
   url: https://pypi.org/packages/source/${{ name[0] }}/${{ name }}/pytest_robotframework-${{ version }}.tar.gz
-  sha256: 6a493193f0ce884d6d5983c41f6689c94458ff80b3fbed1d6376f0f86a06f309
+  sha256: e4c6fde4ae332882c81bfe3c6adfbae79caac0b7a9c8337151ab3308921618dc
 
 build:
   number: 0
@@ -25,11 +25,11 @@ requirements:
     - pip
   run:
     - python >=${{ python_min }},<4.0
-    - pytest >=7,<9
+    - pytest >=7,<10
     - robotframework >=6.1,<8.0.0
-    - basedtyping >=0.1.0,<0.2
     - ansi2html >=1.9.1
-
+    - typing_extensions
+    - pluggy
 tests:
   - python:
       imports:
